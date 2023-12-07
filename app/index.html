@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clarita la cuenta</title>
+</head>
+
+<body">
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/isologo.svg" alt="Logo Clarita la cuenta" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link" id="nombreMostrado"></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" id="saldoMostrado"></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#"><i class="bi bi-info-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-light py-5">
+        <div class="container">
+            <h1>Gestor de Gastos</h1>
+            <!-- Agrega esto en el cuerpo de tu página -->
+            <div class="col-lg-4">
+                <h2 class="py-3">Agregar Gastos</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="descripcionGasto">Descripción:</label>
+                        <input type="text" class="form-control" id="descripcionGasto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidadGasto">Cantidad:</label>
+                        <input type="number" class="form-control" id="cantidadGasto" required>
+                    </div>
+                    <div class="py-3">
+                        <button type="button" id="agregarGasto" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h2 class="pt-3">Gastos</h2>
+                <ul id="listaGastos"></ul>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="miModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Bienvenido! <br> Por favor, escriba su
+                            nombre y su saldo</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formUsuario">
+                            <div class="form-group">
+                                <label for="nombreUsuario">Nombre:</label>
+                                <input type="text" class="form-control" id="nombreUsuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="saldoUsuario">Saldo:</label>
+                                <input type="number" class="form-control" id="saldoUsuario" required>
+                            </div>
+                            <div class="modal-footer mt-3">
+                                <button type="submit" class="btn btn-primary">Confirmar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white mt-auto">
+        <div class="container mt-auto text-center">
+            <div class="row py-5">
+                <div class="col-lg-4 col-md-3">
+                    <h5 class="fw-bold">Alumno</h5>
+                    <p>Ezequiel Rosales Milano</p>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <h5 class="fw-bold">Datos de Cursada</h5>
+                    <p>Diseño y Programación 1</p>
+                    <p>Profesor: Sergio Medina</p>
+                    <p>Comisión: DMN3BV </p>
+                    <p>2023</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold">Nuestras Redes</h5>
+                    <a class="text-info" href="https://www.instagram.com/"><i class="bi bi-instagram fs-1"></i></a>
+                    <a class="text-info" href="https://www.facebook.com"><i class="bi bi-facebook fs-1"></i></a>
+                    <a class="text-info" href="https://www.youtube.com"><i class="bi bi-youtube fs-1"></i></a>
+                </div>
+                <div class="col-12 pt-5">
+                    <p class="text-center">Copyright© 2023 - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,1 @@
+La funcionalidad de la app es que el usuario pueda llevar un registro de los gastos personales, teniendo la posibilidad de ingresar un saldo y que ese saldo se vaya restando a medida que va agregando gastos.

@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card .btn-danger {
+    width: 100%;
+}
